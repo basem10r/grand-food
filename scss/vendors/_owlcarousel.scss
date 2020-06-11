@@ -1,0 +1,21 @@
+// styling owl-carousel plugin
+
+.owl-dots {
+  text-align: center;
+  .owl-dot {
+    height: 6px;
+    width: 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background: $gray !important;
+    &.active {
+      background: $gradient !important;
+      width: 20px;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+}

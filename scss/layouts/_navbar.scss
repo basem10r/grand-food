@@ -1,0 +1,134 @@
+// start styling navbar
+// ***********************
+
+.navbar-inverse {
+  padding-top: 10px;
+  background: none;
+  border: none;
+  height: 60px;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  z-index: 99999;
+}
+
+.navbar-header {
+  width: 10%;
+  float: left;
+
+  @media #{$max-mobile} {
+    width: 100%;
+  }
+}
+
+.navbar-collapse {
+  width: 100%;
+  padding-right: 0;
+  margin: 0;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  position: relative;
+  text-align: center;
+  @media #{$max-mobile} {
+    background: $white;
+  }
+}
+
+.navbar-inverse .navbar-brand {
+  @include transition();
+
+  img {
+    @media #{$max-mobile} {
+      position: absolute;
+      left: 20px;
+      width: 150px;
+    }
+  }
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.navbar-toggle {
+  float: right;
+  margin-right: 0px;
+  border: 0;
+  background: $white;
+
+  .icon-bar {
+    background: $gradient !important;
+  }
+
+  &:hover,
+  &:focus {
+    background: $gradient !important;
+
+    .icon-bar {
+      background: $white !important;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: $white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 15px;
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: darken($white, 15%);
+  }
+  @media #{$max-medium} {
+    font-size: 12px;
+  }
+  @media #{$max-mobile} {
+    color: $black;
+  }
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: transparent;
+
+  &:after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: $white;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include transition();
+  }
+  @media #{$max-mobile} {
+    color: $orange;
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: none;
+}
+
+.affix {
+  background: $gradient;
+  width: 100%;
+  height: 75px;
+  z-index: 999;
+  @include shadow(0px, 0px, 25px, -3px, $black);
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  @include transition();
+
+  li a {
+    color: $white;
+  }
+}

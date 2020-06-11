@@ -1,0 +1,118 @@
+@import "framework";
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: lighten(gray, 2%);
+  background: $white;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+// adding second font for headings
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Abril Fatface", cursive;
+  color: $black;
+}
+
+// styling primary button
+.btn-primary {
+  background: $white;
+  color: $orange;
+  border: 2px solid $white;
+  padding: 17px 29px;
+  border-radius: 25px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  @include transition();
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+  }
+}
+
+// section common style
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media #{$max-mobile} {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 0px;
+      height: 4px;
+      width: 100px;
+      border-radius: 2px;
+      background: $gradient;
+    }
+    &.center {
+      &:after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        right: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        height: 4px;
+        width: 100px;
+        border-radius: 2px;
+        background: $gradient;
+      }
+    }
+    .big,
+    .small,
+    h3,
+    h4 {
+      color: $black;
+    }
+    .big {
+      font-size: 4rem;
+      @media #{$max-mobile} {
+        font-size: 2rem;
+      }
+    }
+    .small {
+      font-size: 3rem;
+      text-align: center;
+      @media #{$max-mobile} {
+        font-size: 2rem;
+      }
+    }
+  }
+  p {
+    line-height: 2rem;
+    @media #{$max-mobile} {
+      line-height: 1.3rem;
+    }
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .section-content {
+    padding-top: 50px;
+  }
+}
+
+// margins
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}

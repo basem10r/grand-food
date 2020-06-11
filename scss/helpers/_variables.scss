@@ -1,0 +1,15 @@
+$black: #333333;
+$white: white;
+$orange: #ff7346;
+$pink: #ff3f7c;
+$gradient: linear-gradient(45deg, $orange, $pink);
+$gray: #e5e5e5;
+
+$min-mobilex: "(min-width: 480px)";
+$max-mobilex: "(max-width: 481px)";
+$min-mobile: "(min-width: 767px)";
+$max-mobile: "(max-width: 767px)";
+$max-medium: "(max-width: 992px)";
+$min-medium: "(min-width: 991px)";
+$min-large: "(min-width: 1200px)";
+$max-large: "(max-width: 1201px)";

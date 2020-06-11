@@ -1,0 +1,26 @@
+// styling outlets section
+// *****************************
+
+.outlets {
+  .item {
+    padding-top: 20px;
+  }
+  .outlet-card {
+    padding: 20px;
+    @include transition();
+    @media #{$max-mobile} {
+      padding: 0;
+      border-radius: 25px;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:hover {
+      @include rotateZ(180deg);
+    }
+    margin-bottom: 30px;
+    border-radius: 35px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include shadow(0px, 0px, 25px, -10px, rgba($black, 0.2));
+  }
+}

@@ -1,0 +1,85 @@
+// start styling hero section
+// *****************************
+
+.hero {
+  background: url(../images/hero-bg.png) no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 100vh;
+  color: $white;
+  @media #{$max-mobile} {
+    height: 100%;
+  }
+
+  .hero-content {
+    .hero-jumpotron {
+      margin-top: 10%;
+      width: 100%;
+      span {
+        letter-spacing: 10px;
+      }
+      h1 {
+        font-size: 4rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        line-height: 5rem;
+        color: $white;
+        max-width: 600px;
+        @media #{$max-medium} {
+          font-size: 3rem;
+          line-height: 3rem;
+          max-width: 400px;
+        }
+        @media #{$max-mobile} {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+      @media #{$max-mobile} {
+        text-align: center;
+        padding-top: 50px;
+      }
+    }
+    .hero-shape {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      height: 100%;
+      width: 40%;
+      animation: rotation 3s infinite alternate-reverse;
+      @for $i from 1 through 4 {
+        .item#{$i} {
+          border-radius: 50px;
+          border-top-left-radius: 0px;
+          border-bottom-right-radius: 0;
+          overflow: hidden;
+          margin-bottom: 30px;
+          @include shadow(0px, 10px, 35px, -5px, rgba($black, 0.2));
+          @media #{$max-mobile} {
+            border-radius: 25px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0;
+          }
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      .item4 {
+        background: $gradient;
+        height: 150px;
+        width: 70%;
+        @media #{$max-mobile} {
+          height: 50px;
+        }
+      }
+      @media #{$max-mobile} {
+        top: 50px;
+        right: 0;
+        position: relative;
+        display: block;
+        width: 80%;
+      }
+    }
+  }
+}
